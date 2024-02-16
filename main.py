@@ -47,9 +47,9 @@ melbourne_rfm_model = RandomForestRegressor(random_state=1)
 melbourne_rfm_model.fit(train_X, train_y)
 
 #STEP 4: Make Predictions with Validation Data and Calculate Mean Absolute Error 
-prediction = melbourne_rfm_model.predict(val_X)
-# Calculate the mean absolute error of your Random Forest model on the validation data
-melbourne_rfm_mae = mean_absolute_error(val_y,prediction)
+prediction = melbourne_rfm_model.predict(validation_X)
+# Calculate the mean absolute error of your Random Forest model on the validation Prediction Target
+melbourne_rfm_mae = mean_absolute_error(validation_y,prediction)
 
 print("Validation MAE for Random Forest Model: {}".format(melbourne_rfm_mae))
 
